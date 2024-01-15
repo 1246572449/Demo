@@ -32,5 +32,16 @@ final class DemoTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testDemoExist() {
+        XCTAssertNotNil(Stack.self, "hehe")
+    }
+    
+    func testPushANunberAndGetIt() {
+        let stack = Stack()
+        stack.push(num: 3)
+        let num = stack.top()
+        XCTAssertEqual(num, 3, "is not equal")
+    }
 
 }
